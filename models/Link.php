@@ -4,6 +4,7 @@ namespace yuncms\link\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 use common\models\Admin;
 use common\models\Type;
 
@@ -36,12 +37,23 @@ class Link extends ActiveRecord
     /**
      * @inheritdoc
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function rules()
     {
         return [
-            [['type_id', 'admin_id', 'created_at', 'updated_at'], 'integer'],
-            [['name', 'url', 'created_at', 'updated_at'], 'required'],
+            [['type_id', 'admin_id'], 'integer'],
+            [['name', 'url'], 'required'],
             [['name', 'description', 'url', 'logo'], 'string', 'max' => 255],
+            [['url'], 'url'],
             [['admin_id'], 'exist', 'skipOnError' => true, 'targetClass' => Admin::className(), 'targetAttribute' => ['admin_id' => 'id']],
             [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
