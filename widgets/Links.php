@@ -18,7 +18,7 @@ use yuncms\link\models\Link;
  * ````
  * @package yuncms\link
  */
-class LinkWidget extends Widget
+class Links extends Widget
 {
     /**
      * @var int 需要显示的数量
@@ -47,7 +47,7 @@ class LinkWidget extends Widget
         $links = Link::getDb()->cache(function ($db) {
             return Link::find()->orderBy(['sort' => SORT_DESC])->limit($this->limit)->all();
         }, $this->cache);
-        return $this->render('link', [
+        return $this->render('links', [
             'links' => $links,
         ]);
     }
