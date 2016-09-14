@@ -12,5 +12,5 @@ namespace yuncms\link;
  */
 class Module extends \yii\base\Module
 {
-
+    public $controllerNamespace = 'yuncms\link\controllers';
 }
