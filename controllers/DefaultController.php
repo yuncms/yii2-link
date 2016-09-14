@@ -8,7 +8,7 @@ namespace yuncms\link\controllers;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yuncms\models\Link;
+use yuncms\link\models\Link;
 
 /**
  * Class DefaultController
@@ -17,17 +17,22 @@ use yuncms\models\Link;
 class DefaultController extends Controller
 {
 
-    
+
     public function actionIndex()
     {
 
     }
 
     /**
+     * 连接跳转
      * @param int $id
+     * @return \yii\web\Response
+     * @throws NotFoundHttpException
      */
-    public function actionView($id){
-
+    public function actionView($id)
+    {
+        $model = $this->findModel($id);
+        return $this->redirect($model->url, 301);
     }
 
     /**
