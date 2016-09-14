@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+
 /**
  * @var \yuncms\link\models\Link $links
  */
@@ -9,7 +10,7 @@ use yii\helpers\Url;
 <ul class="link-widget-link">
     <?php
     foreach ($links as $link) {
-        echo Html::tag('li', Html::a($link->name, $link->url, ['rel' => 'link']));
+        echo Html::tag('li', Html::a($link->name, $link->url, ['rel' => 'link', 'target' => '_blank']));
     }
     ?>
 </ul>
