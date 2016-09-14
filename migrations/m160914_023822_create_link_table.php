@@ -26,6 +26,7 @@ class m160914_023822_create_link_table extends Migration
             'url' => $this->string()->notNull(),
             'logo' => $this->string(),
             'admin_id' => $this->integer(),
+            'sort' => $this->integer(5)->defaultValue(0),
             'created_at' => $this->integer()->unsigned()->notNull(),
             'updated_at' => $this->integer()->unsigned()->notNull(),
         ], $tableOptions);
