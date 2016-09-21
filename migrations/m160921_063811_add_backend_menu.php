@@ -17,6 +17,10 @@ class m160921_063811_add_backend_menu extends Migration
             ['创建连接', 80, '/link/create', 0, NULL],
             ['更新连接', 80, '/link/update', 0, NULL],
             ['连接设置', 80, '/link/setting', 0, NULL],
+            ['类别设置', 80, '/link-type/setting', 0, NULL],
+            ['创建类别', 80, '/link-type/create', 0, NULL],
+            ['更新类别', 80, '/link-type/update', 0, NULL],
+            ['查看类别', 80, '/link-type/view', 0, NULL],
         ]);
     }
 
