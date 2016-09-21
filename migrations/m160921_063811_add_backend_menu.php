@@ -22,9 +22,8 @@ class m160921_063811_add_backend_menu extends Migration
 
     public function down()
     {
-        echo "m160921_063811_add_backend_menu cannot be reverted.\n";
-
-        return false;
+        $this->delete('{{%admin_menu}}', ['id' => 80,]);
+        $this->delete('{{%admin_menu}}', ['parent' => 80,]);
     }
 
     /*
