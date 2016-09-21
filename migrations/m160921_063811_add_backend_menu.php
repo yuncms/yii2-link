@@ -6,9 +6,12 @@ class m160921_063811_add_backend_menu extends Migration
 {
     public function up()
     {
-        $this->batchInsert('{{%admin_menu}}', ['id', 'name', 'parent', 'route', 'icon', 'sort', 'data'], [
-            [80, '连接管理', 8, '/link/index', 'fa-link', NULL, NULL],
-        ]);
+        $this->insert('{{%admin_menu}}', [
+            'id' => 80,
+            'name' => '连接管理',
+            'parent' => 8,
+            'route' => '/link/index', 'icon' => 'fa-link', 'sort' => null, 'data' => null]);
+
         $this->batchInsert('{{%admin_menu}}', ['name', 'parent', 'route', 'visible', 'sort'], [
             ['连接查看', 80, '/link/view', 0, NULL],
             ['创建连接', 80, '/link/create', 0, NULL],
