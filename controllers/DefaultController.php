@@ -17,10 +17,12 @@ use yuncms\link\models\Link;
 class DefaultController extends Controller
 {
 
-
+    /**
+     * 连接首页
+     */
     public function actionIndex()
     {
-
+        $this->render('index');
     }
 
     /**
