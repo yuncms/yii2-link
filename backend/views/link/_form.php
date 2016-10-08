@@ -22,8 +22,6 @@ use common\models\Type;
 
     <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'admin_id')->textInput() ?>
-
 </fieldset>
 <div class="form-actions">
     <div class="row">

@@ -5,6 +5,7 @@ namespace yuncms\link\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
+use yii\behaviors\BlameableBehavior;
 use common\models\Admin;
 use common\models\Type;
 
@@ -41,6 +42,12 @@ class Link extends ActiveRecord
     {
         return [
             TimestampBehavior::className(),
+            'blameable' => [
+                'class' => BlameableBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'admin_id',
+                ],
+            ]
         ];
     }
 

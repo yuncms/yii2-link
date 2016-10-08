@@ -42,12 +42,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
                     'id',
-                    'type_id',
+                    [
+                        'attribute' => 'type.name',
+                        'label' => Yii::t('app', 'Type'),
+                    ],
                     'name',
                     'description',
                     'url:url',
                     // 'logo',
-                    // 'admin_id',
+                    [
+                        'attribute' => 'admin.username',
+                        'label' => Yii::t('app', 'User'),
+                    ],
                     // 'created_at',
                     // 'updated_at',
                     ['class' => 'yii\grid\ActionColumn','header' => Yii::t('app', 'Operation'),],
