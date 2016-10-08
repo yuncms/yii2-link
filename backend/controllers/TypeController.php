@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace backend\controllers;
+namespace yuncms\link\backend\controllers;
 
 use Yii;
 use yii\web\Response;
@@ -68,20 +68,19 @@ class TypeController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($module)
+    public function actionCreate()
     {
         $model = new Type();
-        $model->module = $module;
+        $model->module = 'link';
         if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
             Yii::$app->response->format = Response::FORMAT_JSON;
             return ActiveForm::validate($model);
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Create success.'));
-            return $this->redirect(['view', 'id' => $model->id, 'module' => $module]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                'module' => $module,
                 'model' => $model,
             ]);
         }
@@ -102,7 +101,7 @@ class TypeController extends Controller
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Update success.'));
-            return $this->redirect(['view', 'id' => $model->id, 'module' => $model->module]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,

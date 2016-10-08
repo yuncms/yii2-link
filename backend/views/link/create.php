@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'bodyToolbarActions' => [
                     [
                         'label' => Yii::t('backend/link', 'Manage Link'),
-                        'url' => ['/link/index'],
+                        'url' => ['/link/link/index'],
                     ],
                     [
                         'label' => Yii::t('backend/link', 'Create Link'),
-                        'url' => ['/link/create'],
+                        'url' => ['/link/link/create'],
                     ],
                 ]
             ]); ?>

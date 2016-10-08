@@ -23,12 +23,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/link', 'Manage Type'),
-                        'url' => ['/link-type/index'],
+                        'label' => Yii::t('backend/link', 'Manage Link'),
+                        'url' => ['/link/link/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Create Type'),
-                        'url' => ['/link-type/create'],
+                        'label' => Yii::t('backend/type', 'Manage Type'),
+                        'url' => ['/link/type/index'],
+                    ],
+                    [
+                        'label' => Yii::t('backend/type', 'Create Type'),
+                        'url' => ['/link/type/create'],
                     ],
                 ]
             ]); ?>

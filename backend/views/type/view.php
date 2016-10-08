@@ -21,21 +21,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/link', 'Manage Type'),
-                        'url' => ['/type/index', 'module' => $model->module],
+                        'label' => Yii::t('backend/type', 'Manage Type'),
+                        'url' => ['/link/type/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Create Type'),
-                        'url' => ['/type/create', 'module' => $model->module],
+                        'label' => Yii::t('backend/type', 'Create Type'),
+                        'url' => ['/link/type/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Update Type'),
-                        'url' => ['/type/update', 'id' => $model->id, 'module' => $model->module],
+                        'label' => Yii::t('backend/type', 'Update Type'),
+                        'url' => ['/link/type/update', 'id' => $model->id],
                         'options' => ['class' => 'btn btn-primary btn-sm']
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Delete Type'),
-                        'url' => ['/type/delete', 'id' => $model->id],
+                        'label' => Yii::t('backend/type', 'Delete Type'),
+                        'url' => ['/link/type/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [

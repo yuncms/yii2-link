@@ -22,20 +22,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'bodyToolbarActions' => [
                     [
                         'label' => Yii::t('backend/link', 'Manage Link'),
-                        'url' => ['/link/index'],
+                        'url' => ['/link/link/index'],
                     ],
                     [
                         'label' => Yii::t('backend/link', 'Create Link'),
-                        'url' => ['/link/create'],
+                        'url' => ['/link/link/create'],
                     ],
                     [
                         'label' => Yii::t('backend/link', 'Update Link'),
-                        'url' => ['/link/update', 'id' => $model->id],
+                        'url' => ['/link/link/update', 'id' => $model->id],
                         'options' => ['class' => 'btn btn-primary btn-sm']
                     ],
                     [
                         'label' => Yii::t('backend/link', 'Delete Link'),
-                        'url' => ['/link/delete', 'id' => $model->id],
+                        'url' => ['/link/link/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [

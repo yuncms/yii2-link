@@ -6,8 +6,8 @@ use backend\helpers\Html;
 /* @var common\models\Type $model */
 /* @var ActiveForm $form */
 ?>
-<?php $form = ActiveForm::begin(['layout'=>'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>
-<?= Html::activeHiddenInput($model, 'module'); ?>
+<?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>
+
 <fieldset>
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
