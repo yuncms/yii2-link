@@ -1,0 +1,33 @@
+<?php
+use yii\bootstrap\ActiveForm;
+use backend\helpers\Html;
+
+/* @var \yii\web\View $this */
+/* @var yuncms\link\models\Link $model */
+/* @var ActiveForm $form */
+?>
+<?php $form = ActiveForm::begin(['layout'=>'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => true,]); ?>
+<fieldset>
+    <?= $form->field($model, 'type_id')->textInput() ?>
+
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'admin_id')->textInput() ?>
+
+</fieldset>
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
+    </div>
+</div>
+
+<?php ActiveForm::end(); ?>
+
