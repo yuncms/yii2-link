@@ -1,14 +1,18 @@
 <?php
+use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
 use backend\helpers\Html;
+use common\models\Type;
 
 /* @var \yii\web\View $this */
 /* @var yuncms\link\models\Link $model */
 /* @var ActiveForm $form */
 ?>
-<?php $form = ActiveForm::begin(['layout'=>'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => true,]); ?>
+<?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => true,]); ?>
 <fieldset>
-    <?= $form->field($model, 'type_id')->textInput() ?>
+    <?= $form->field($model, 'type_id')
+        ->dropDownList(ArrayHelper::map(Type::find()->where(['module' => 'link'])->asArray()->all(), 'id', 'name'), ['prompt' => '请选择',
+        ]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

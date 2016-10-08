@@ -10,17 +10,17 @@ class m160921_063811_add_backend_menu extends Migration
             'id' => 80,
             'name' => '连接管理',
             'parent' => 8,
-            'route' => '/link/index', 'icon' => 'fa-link', 'sort' => null, 'data' => null]);
+            'route' => '/link/link/index', 'icon' => 'fa-link', 'sort' => null, 'data' => null]);
 
         $this->batchInsert('{{%admin_menu}}', ['name', 'parent', 'route', 'visible', 'sort'], [
-            ['连接查看', 80, '/link/view', 0, NULL],
-            ['创建连接', 80, '/link/create', 0, NULL],
-            ['更新连接', 80, '/link/update', 0, NULL],
-            ['连接设置', 80, '/link/setting', 0, NULL],
-            ['类别设置', 80, '/link-type/setting', 0, NULL],
-            ['创建类别', 80, '/link-type/create', 0, NULL],
-            ['更新类别', 80, '/link-type/update', 0, NULL],
-            ['查看类别', 80, '/link-type/view', 0, NULL],
+            ['连接查看', 80, '/link/link/view', 0, NULL],
+            ['创建连接', 80, '/link/link/create', 0, NULL],
+            ['更新连接', 80, '/link/link/update', 0, NULL],
+            ['连接设置', 80, '/link/link/setting', 0, NULL],
+            ['类别设置', 80, '/link/type/setting', 0, NULL],
+            ['创建类别', 80, '/link/type/create', 0, NULL],
+            ['更新类别', 80, '/link/type/update', 0, NULL],
+            ['查看类别', 80, '/link/type/view', 0, NULL],
         ]);
     }
 
