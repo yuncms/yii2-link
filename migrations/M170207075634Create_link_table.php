@@ -1,15 +1,11 @@
 <?php
 
+namespace yuncms\link\migrations;
+
 use yii\db\Migration;
 
-/**
- * Handles the creation for table `link`.
- */
-class m160914_023822_create_link_table extends Migration
+class M170207075634Create_link_table extends Migration
 {
-    /**
-     * @inheritdoc
-     */
     public function up()
     {
         $tableOptions = null;
@@ -25,21 +21,29 @@ class m160914_023822_create_link_table extends Migration
             'description' => $this->string(),
             'url' => $this->string()->notNull(),
             'logo' => $this->string(),
-            'admin_id' => $this->integer(),
+            'user_id' => $this->integer(),
             'sort' => $this->integer(5)->defaultValue(0),
             'created_at' => $this->integer()->unsigned()->notNull(),
             'updated_at' => $this->integer()->unsigned()->notNull(),
         ], $tableOptions);
 
-        $this->addForeignKey('{{%link_ibfk_1}}', '{{%link}}', 'admin_id', '{{%admin}}', 'id', 'SET NULL', 'CASCADE');
-        $this->addForeignKey('{{%link_ibfk_2}}', '{{%link}}', 'type_id', '{{%type}}', 'id', 'SET NULL', 'CASCADE');
+        $this->addForeignKey('{{%link_ibfk_1}}', '{{%link}}', 'user_id', '{{%user}}', 'id', 'SET NULL', 'CASCADE');
+        //$this->addForeignKey('{{%link_ibfk_2}}', '{{%link}}', 'type_id', '{{%type}}', 'id', 'SET NULL', 'CASCADE');
     }
 
-    /**
-     * @inheritdoc
-     */
     public function down()
     {
         $this->dropTable('{{%link}}');
     }
+
+    /*
+    // Use safeUp/safeDown to run migration code within a transaction
+    public function safeUp()
+    {
+    }
+
+    public function safeDown()
+    {
+    }
+    */
 }

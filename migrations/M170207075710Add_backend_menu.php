@@ -1,8 +1,10 @@
 <?php
 
+namespace yuncms\link\migrations;
+
 use yii\db\Migration;
 
-class m160921_063811_add_backend_menu extends Migration
+class M170207075710Add_backend_menu extends Migration
 {
     public function up()
     {
