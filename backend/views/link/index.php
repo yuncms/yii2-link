@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                     [
                         'label' => Yii::t('link', 'Manage Type'),
-                        'url' => ['index'],
+                        'url' => ['/link/type/index'],
                     ],
                     [
                         'label' => Yii::t('link', 'Create Link'),
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'url:url',
                     // 'logo',
                     [
-                        'attribute' => 'admin.username',
+                        'attribute' => 'user.username',
                         'label' => Yii::t('app', 'User'),
                     ],
                     // 'created_at',

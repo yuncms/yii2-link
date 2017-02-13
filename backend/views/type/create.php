@@ -1,13 +1,13 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yii\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Type */
+/* @var $model yuncms\system\models\Type */
 
-$this->title = Yii::t('backend/link', 'Create Type');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/link', 'Manage Type'), 'url' => ['index']];
+$this->title = Yii::t('link', 'Create Type');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('link', 'Manage Type'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -19,11 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/type', 'Manage Type'),
+                        'label' => Yii::t('link', 'Manage Type'),
                         'url' => ['/link/type/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/type', 'Create Type'),
+                        'label' => Yii::t('link', 'Create Type'),
                         'url' => ['/link/type/create'],
                     ],
                 ]

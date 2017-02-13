@@ -11,8 +11,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use yii\bootstrap\ActiveForm;
 use yii\web\NotFoundHttpException;
-use common\models\Type;
-use backend\models\TypeSearch;
+use yuncms\system\models\Type;
+use yuncms\system\backend\models\TypeSearch;
 use yii\web\Controller;
 
 /**

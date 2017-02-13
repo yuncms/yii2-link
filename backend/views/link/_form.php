@@ -2,7 +2,7 @@
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
-use common\models\Type;
+use yuncms\system\models\Type;
 
 /* @var \yii\web\View $this */
 /* @var yuncms\link\models\Link $model */

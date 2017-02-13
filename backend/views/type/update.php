@@ -1,7 +1,7 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yii\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Type */
