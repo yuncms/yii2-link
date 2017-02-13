@@ -61,7 +61,7 @@ class Link extends ActiveRecord
             [['name', 'url'], 'required'],
             [['name', 'description', 'url', 'logo'], 'string', 'max' => 255],
             [['url'], 'url'],
-            [['admin_id'], 'exist', 'skipOnError' => true, 'targetClass' => Admin::className(), 'targetAttribute' => ['admin_id' => 'id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => Yii::$app->user->identityClass, 'targetAttribute' => ['user_id' => 'id']],
             [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
     }
@@ -78,7 +78,7 @@ class Link extends ActiveRecord
             'description' => Yii::t('app', 'Description'),
             'url' => Yii::t('app', 'Url'),
             'logo' => Yii::t('app', 'Logo'),
-            'admin_id' => Yii::t('app', 'Admin ID'),
+            'user_id' => Yii::t('app', 'Admin ID'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
@@ -87,9 +87,9 @@ class Link extends ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAdmin()
+    public function getUser()
     {
-        return $this->hasOne(Admin::className(), ['id' => 'admin_id']);
+        return $this->hasOne(Yii::$app->user->identityClass, ['id' => 'user_id']);
     }
 
     /**

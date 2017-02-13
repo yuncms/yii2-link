@@ -1,7 +1,7 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yii\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
 /* @var $model yuncms\link\models\Link */
@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/link', 'Manage Link'),
+                        'label' => Yii::t('link', 'Manage Link'),
                         'url' => ['/link/link/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Create Link'),
+                        'label' => Yii::t('link', 'Create Link'),
                         'url' => ['/link/link/create'],
                     ],
                 ]

@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
-use backend\helpers\Html;
+use yii\helpers\Html;
 use common\models\Type;
 
 /* @var \yii\web\View $this */

@@ -1,14 +1,14 @@
 <?php
 
-use backend\helpers\Html;
+use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
 /* @var $model yuncms\link\models\Link */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/link', 'Manage Link'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('link', 'Manage Link'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -21,20 +21,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/link', 'Manage Link'),
+                        'label' => Yii::t('link', 'Manage Link'),
                         'url' => ['/link/link/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Create Link'),
+                        'label' => Yii::t('link', 'Create Link'),
                         'url' => ['/link/link/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Update Link'),
+                        'label' => Yii::t('link', 'Update Link'),
                         'url' => ['/link/link/update', 'id' => $model->id],
                         'options' => ['class' => 'btn btn-primary btn-sm']
                     ],
                     [
-                        'label' => Yii::t('backend/link', 'Delete Link'),
+                        'label' => Yii::t('link', 'Delete Link'),
                         'url' => ['/link/link/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',

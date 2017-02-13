@@ -4,13 +4,12 @@ namespace yuncms\link\backend\controllers;
 
 use Yii;
 use yii\web\Response;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\bootstrap\ActiveForm;
 use yii\web\NotFoundHttpException;
 use yuncms\link\models\Link;
-use backend\models\LinkSearch;
-use yii\web\Controller;
-
+use yuncms\link\backend\models\LinkSearch;
 
 /**
  * LinkController implements the CRUD actions for Link model.
