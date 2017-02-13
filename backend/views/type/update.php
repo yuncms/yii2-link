@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Type */
+/* @var $model yuncms\system\models\Type */
 
-$this->title = Yii::t('backend/link', 'Update Type') . ': ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/link', 'Manage Type'), 'url' => ['index']];
+$this->title = Yii::t('link', 'Update Type') . ': ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('link', 'Manage Type'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/type', 'Manage Type'),
+                        'label' => Yii::t('link', 'Manage Type'),
                         'url' => ['/link/type/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/type', 'Create Type'),
+                        'label' => Yii::t('link', 'Create Type'),
                         'url' => ['/link/type/create'],
                     ],
                 ]

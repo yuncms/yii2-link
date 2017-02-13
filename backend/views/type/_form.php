@@ -3,7 +3,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
 /* @var \yii\web\View $this */
-/* @var common\models\Type $model */
+/* @var yuncms\system\models\Type $model */
 /* @var ActiveForm $form */
 ?>
 <?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>

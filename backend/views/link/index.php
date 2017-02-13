@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id',
                     [
                         'attribute' => 'type.name',
-                        'label' => Yii::t('app', 'Type'),
+                        'label' => Yii::t('link', 'Type'),
                     ],
                     'name',
                     'description',
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     // 'logo',
                     [
                         'attribute' => 'user.username',
-                        'label' => Yii::t('app', 'User'),
+                        'label' => Yii::t('link', 'User'),
                     ],
                     // 'created_at',
                     // 'updated_at',

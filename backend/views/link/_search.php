@@ -5,7 +5,7 @@ use backend\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\LinkSearch */
-/* @var $form backend\widgets\ActiveForm */
+/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="link-search">

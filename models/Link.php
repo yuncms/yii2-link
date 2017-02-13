@@ -71,14 +71,14 @@ class Link extends ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'type_id' => Yii::t('app', 'Type ID'),
-            'name' => Yii::t('app', 'Name'),
-            'description' => Yii::t('app', 'Description'),
-            'url' => Yii::t('app', 'Url'),
-            'logo' => Yii::t('app', 'Logo'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'type_id' => Yii::t('link', 'Type ID'),
+            'name' => Yii::t('link', 'Name'),
+            'description' => Yii::t('link', 'Description'),
+            'url' => Yii::t('link', 'Url'),
+            'logo' => Yii::t('link', 'Logo'),
+            'user_id' => Yii::t('link', 'User ID'),
+            'created_at' => Yii::t('link', 'Created At'),
+            'updated_at' => Yii::t('link', 'Updated At'),
         ];
     }
 

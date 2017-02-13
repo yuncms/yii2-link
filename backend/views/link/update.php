@@ -6,8 +6,8 @@ use yuncms\admin\widgets\Jarvis;
 /* @var $this yii\web\View */
 /* @var $model yuncms\link\models\Link */
 
-$this->title = Yii::t('backend/link', 'Update Link') . ': ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/link', 'Manage Link'), 'url' => ['index']];
+$this->title = Yii::t('link', 'Update Link') . ': ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('link', 'Manage Link'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
