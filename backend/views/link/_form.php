@@ -10,17 +10,17 @@ use yuncms\system\models\Type;
 ?>
 <?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => true,]); ?>
 
-    <?= $form->field($model, 'type_id')
-        ->dropDownList(ArrayHelper::map(Type::find()->where(['module' => 'link'])->asArray()->all(), 'id', 'name'), ['prompt' => '请选择',
-        ]) ?>
+<?= $form->field($model, 'type_id')
+    ->dropDownList(ArrayHelper::map(Type::find()->where(['module' => 'link'])->asArray()->all(), 'id', 'name'), ['prompt' => '请选择',
+    ]) ?>
 <div class="hr-line-dashed"></div>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 <div class="hr-line-dashed"></div>
-    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 <div class="hr-line-dashed"></div>
-    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 <div class="hr-line-dashed"></div>
-    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
 <div class="hr-line-dashed"></div>
 
 <div class="form-group">
