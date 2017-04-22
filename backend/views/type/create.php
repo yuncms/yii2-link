@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var $this yii\web\View */
 /* @var $model yuncms\system\models\Type */
@@ -13,9 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <section id="widget-grid">
     <div class="row">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type-create">
-            <?php Jarvis::begin([
-                'editbutton' => false,
-                'deletebutton' => false,
+            <?= Alert::widget() ?>
+            <?php Box::begin([
+
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
@@ -32,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $this->render('_form', [
                 'model' => $model,
             ]) ?>
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Type */
@@ -15,9 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type-view">
             <?php Jarvis::begin([
-                'noPadding' => true,
-                'editbutton' => false,
-                'deletebutton' => false,
+                
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'module',
                 ],
             ]) ?>
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

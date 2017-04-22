@@ -3,7 +3,9 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 /* @var $this yii\web\View */
 /* @var $searchModel yuncms\system\backend\models\TypeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -16,9 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type-index">
             <?php Pjax::begin(); ?>
             <?php Jarvis::begin([
-                'noPadding' => true,
-                'editbutton' => false,
-                'deletebutton' => false,
+                
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
@@ -48,8 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\ActionColumn', 'header' => Yii::t('app', 'Operation'),],
                 ],
             ]); ?>
-            <?php Jarvis::end(); ?>
+            <?php Box::end(); ?>
             <?php Pjax::end(); ?>
-        </article>
+        </div>
     </div>
-</section>
+</div>
