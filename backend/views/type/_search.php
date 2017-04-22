@@ -1,27 +1,33 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\ActiveForm;
+use yii\helpers\Html;
+use xutl\inspinia\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\TypeSearch */
-/* @var $form backend\widgets\ActiveForm */
+/* @var $model yuncms\system\models\TypeSearch */
+/* @var $form ActiveForm */
 ?>
 
-<div class="type-search">
+<div class="type-search  pull-right">
 
     <?php $form = ActiveForm::begin([
+        'layout' => 'inline',
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'id', [
+        'inputOptions' => [
+            'placeholder' => $model->getAttributeLabel('id'),
+        ],
+    ]) ?>
 
-    <?= $form->field($model, 'name') ?>
+    <?= $form->field($model, 'name', [
+        'inputOptions' => [
+            'placeholder' => $model->getAttributeLabel('name'),
+        ],
+    ]) ?>
 
-    <?= $form->field($model, 'parent') ?>
-
-    <?= $form->field($model, 'module') ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>

@@ -9,27 +9,26 @@ use yuncms\system\models\Type;
 /* @var ActiveForm $form */
 ?>
 <?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => true,]); ?>
-<fieldset>
+
     <?= $form->field($model, 'type_id')
         ->dropDownList(ArrayHelper::map(Type::find()->where(['module' => 'link'])->asArray()->all(), 'id', 'name'), ['prompt' => '请选择',
         ]) ?>
-
+<div class="hr-line-dashed"></div>
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
+<div class="hr-line-dashed"></div>
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
-
+<div class="hr-line-dashed"></div>
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
-
+<div class="hr-line-dashed"></div>
     <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+<div class="hr-line-dashed"></div>
 
-</fieldset>
-<div class="form-actions">
-    <div class="row">
-        <div class="col-md-12">
-            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-        </div>
+<div class="form-group">
+    <div class="col-sm-4 col-sm-offset-2">
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 </div>
+
 
 <?php ActiveForm::end(); ?>
 

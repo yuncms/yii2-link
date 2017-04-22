@@ -13,25 +13,30 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('link', 'Manage Type'), 'url
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type-update">
+        <div class="col-lg-12 type-update">
             <?= Alert::widget() ?>
             <?php Box::begin([
-
                 'header' => Html::encode($this->title),
-                'bodyToolbarActions' => [
-                    [
-                        'label' => Yii::t('link', 'Manage Type'),
-                        'url' => ['/link/type/index'],
-                    ],
-                    [
-                        'label' => Yii::t('link', 'Create Type'),
-                        'url' => ['/link/type/create'],
-                    ],
-                ]
             ]); ?>
+            <div class="row">
+                <div class="col-sm-4 m-b-xs">
+                    <?= Toolbar::widget(['items' => [
+                        [
+                            'label' => Yii::t('link', 'Manage Type'),
+                            'url' => ['/link/type/index'],
+                        ],
+                        [
+                            'label' => Yii::t('link', 'Create Type'),
+                            'url' => ['/link/type/create'],
+                        ],
+                    ]]); ?>
+                </div>
+                <div class="col-sm-8 m-b-xs">
 
+                </div>
+            </div>
             <?= $this->render('_form', [
                 'model' => $model,
             ]) ?>
