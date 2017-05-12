@@ -3,6 +3,7 @@ use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yuncms\system\models\Type;
+use xutl\fileupload\SingleUpload;
 
 /* @var \yii\web\View $this */
 /* @var yuncms\link\models\Link $model */
@@ -20,7 +21,10 @@ use yuncms\system\models\Type;
 <div class="hr-line-dashed"></div>
 <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 <div class="hr-line-dashed"></div>
-<?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'logo')->widget(SingleUpload::className(), [
+    'onlyImage' => true,
+]) ?>
+
 <div class="hr-line-dashed"></div>
 
 <div class="form-group">

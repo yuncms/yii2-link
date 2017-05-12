@@ -64,13 +64,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     'name',
                     'description',
                     'url:url',
-                    'logo',
+                    'logo:image',
                     [
                         'attribute' => 'user.username',
                         'label' => Yii::t('link', 'User'),
                     ],
-                    'created_at',
-                    'updated_at',
+                    'created_at:datetime',
+                    'updated_at:datetime',
                 ],
             ]) ?>
             <?php Box::end(); ?>
