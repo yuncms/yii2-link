@@ -15,7 +15,7 @@
   ],
   "require": {
     "yiisoft/yii2": "~2.0",
-    "xutl/yii2-fileupload-widget": "~1.0 | dev-master"
+    "xutl/yii2-fileupload-widget": "~1.0"
   },
   "autoload": {
     "psr-4": {
