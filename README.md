@@ -56,3 +56,8 @@ You can use available widgets
 ```php
 <?= Links::widget(['limit'=>10,'cache'=>3600,'type'=>1]) ?>
 ```
+
+## License
+
+This is released under the MIT License. See the bundled [LICENSE.md](LICENSE.md)
+for details.
