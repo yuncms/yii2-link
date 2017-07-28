@@ -15,8 +15,6 @@ use yuncms\link\models\Link;
  */
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'yuncms\link\controllers';
-
     public function init()
     {
         parent::init();

@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace yuncms\link\controllers;
+namespace yuncms\link\frontend\controllers;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
