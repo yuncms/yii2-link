@@ -70,7 +70,7 @@ class Link extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
+            'id' => Yii::t('link', 'ID'),
             'type_id' => Yii::t('link', 'Type ID'),
             'name' => Yii::t('link', 'Name'),
             'description' => Yii::t('link', 'Description'),

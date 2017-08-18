@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'url:url',
                     // 'logo',
                     [
-                        'attribute' => 'user.name',
+                        'attribute' => 'user.username',
                         'label' => Yii::t('link', 'User'),
                     ],
                     // 'created_at',
