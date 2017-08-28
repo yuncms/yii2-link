@@ -21,5 +21,10 @@
     "psr-4": {
       "yuncms\\link\\": ""
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
   }
 }
