@@ -27,6 +27,7 @@
       "name": "link",
       "i18n": {
         "class": "yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
         "basePath": "@yuncms/link/message"
       },
       "migrationNamespace": "yuncms\\link\\migrations",
